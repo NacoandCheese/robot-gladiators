@@ -1,0 +1,110 @@
+Using JavaScrpit for this lesson were making a game called robot gladiators.
+
+Robot Gladiators will follow this sequence:
+1. The game will prompt the player to name their robot
+
+2.  The players robot will be initialized with the following properties:
+- 100 health points 
+- 10 attack points 
+-10 money points
+
+3. The player's opponent , Roborto, will be initialized with the following properties:
+- 50 health points
+- 12 attack points 
+
+4. The game will display "Welcome to Robot Gladiators!"
+
+5. The game will prompt the player to either fight the round or skip it.
+
+6. If the player chooses to skip:
+- A penalty of 10 money points will be deducted from the player's robot.
+- The game will end.
+
+7. If the player chooses to fight:
+- The player's robot will attack Roborto, and the player-robot's attack points will be deducted from Roborto's health points.
+- The game will display Roborto's remaining health points.
+- Roborto will attack the player's robot, and Roborto's attack points will be deducted from the player's robot's health points.
+- The game will display the player-robots remaining health points.
+
+8. The game will end.
+
+** Setting up the project**
+
+1. Set up the project in GitHub. We'll create a new GitHub repository, issues, and branches. These are basic steps for any new project.
+
+2. Create the project files and structure. We'll set up the index.html and game.js file strucuture according to the Con Solo instructions.
+
+3. Use JavaScript functions to disoplay the game status to the player. JavaScript has some built-in functions that do this, and well also create our own functions to control when these messages appear.
+
+4. Use JavaScript variables and operators to manage game data. We'll do a little math to keep track of robot health, player money, and other game values.
+
+5. Make decisions using JavaScript conditions. For example, the game should allow a robot to fight if it still has health points, but not if the health points is 0.
+
+6. Allow the player to decide whether they would like to fight or skip the fight.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+** Introducing Functions **
+
+a function is predefined action that we can call or invoke in our code (after we declare it earlier in the code).
+example- window.alert("This is an alert! JavaScript is running!");
+
+the alert() function tells the browser to display a message (i.e, an alert) to the user. One example is a dialog that pops up to alert you that you forgot to enter your password. The alert() function is built in to the browser; you can also create custom functions.
+
+to run a JavaScript function, we always must include parentheses even if theres nothing between them. When the browser reads the function name and sees the parentheses, it knows to execute the function.
+
+placing content between the () is called passing an argument into a function. For the alert() function, this content will be displayed as the dialogs message whenever the function is called.
+
+a ; closes out the alert() functions code. ; tells the browser that this particular line is completed and any code after it is a new piece of code. Each piece of code, seperated by ; , is known as an expression.
+
+**Declaring a Function**
+
+When we declare a function (i.e, create it and give it a name), we use the keyword fuction, followed by the name we want to give it. 
+
+After the functions name, we need to add (). our fight function doesnt need data passed into it the same way the alert does, but the () are required regardless.
+
+The {} wrap the code that belongs to this function. The function will run any code within the braces, at it wont run any code outside them. The code between these {} is called a code block.
+
+**Calling a Function**
+To call the function, add the function name with () and add a ; at the bottom of game.js,
+fight();
+Then save and refresh.
+
+**Storing User Input Using Variables**
+
+using javascript to ask the player for information and capture their input.
+
+like the alert function we used previously (program to player) we can use another window function called prompt. 
+window.prompt("What is your robot's name?");
+
+now the player can add their information to our program. Whereas the window.alert() function sent a message ("The fight has begun!") from the program to the player, the window.prompt() function asks the player to send some information (the robots name) back to the program. Information that a user enters into a program is often referred to as user input.
+
+if we were to run this program now and fill out the prompt, our response would be sent back to the browser...but there is nothing in place to capture and store that response.
+
+we need to capture this data somehow. To do that, well add an expression to the JS file. Edit the window.prompt() line to match the following code:
+var playerName = window.prompt("What is your robots name?");
+
+we introduced the var code element, which represents a variable.
+
+**Introducing Variables**
+
+A variable is a named location for a value that gets stored in the browsers memory when a program is run. Because the data coming from the prompt is user-driven, the value is unpredictable. Giving the data a variable name (in our case,playerName) allows us to refer to it consistently by just calling on that name.
+
+- var keyword: just like function, var is a keyword built into the javascript language. whenever its used it tells the program that we are creating a new variable and the next word is going to be the name of the variable.
+
+- Variable name: this is the actual name that will store the information assigned to the variable. When the browser reads this line, it will store this name to recall it later in the program. As a rule, give each variable a meaningful(but concise) name, and use camel casing for more than one word. 
+
+- assignment operator: The assignment operator (=) is a single equal sign that is used to set the value to a variable name. Everything on the left of the operator sets up the variable name for the program. Everything on the right of the operator is the value being stored into the variable name. This value can come in several forms, which are called data types. Here are some exampled of variables with different data types with an explanation of each one in the comments: 
+
+// This is a String data type; it must be wrapped in double quotes (" ") or single quotes (' ').
+var stringDataType = "This is a string, which is a fancy way to say text";
+
+// This is a Number data type; it can be an integer (whole number) or have decimals (floated numbers).
+var numberIntegerDataType = 10;
+var numberFloatDataType = 10.4;
+
+// This is a Boolean data type, which can only be given a value of true or false.
+var booleanDataType = true;
+
+**Comments**
+// 
+
+/* for longer comments */
