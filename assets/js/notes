@@ -1,0 +1,184 @@
+Using JavaScrpit for this lesson were making a game called robot gladiators.
+
+Robot Gladiators will follow this sequence:
+1. The game will prompt the player to name their robot
+
+2.  The players robot will be initialized with the following properties:
+- 100 health points 
+- 10 attack points 
+-10 money points
+
+3. The player's opponent , Roborto, will be initialized with the following properties:
+- 50 health points
+- 12 attack points 
+
+4. The game will display "Welcome to Robot Gladiators!"
+
+5. The game will prompt the player to either fight the round or skip it.
+
+6. If the player chooses to skip:
+- A penalty of 10 money points will be deducted from the player's robot.
+- The game will end.
+
+7. If the player chooses to fight:
+- The player's robot will attack Roborto, and the player-robot's attack points will be deducted from Roborto's health points.
+- The game will display Roborto's remaining health points.
+- Roborto will attack the player's robot, and Roborto's attack points will be deducted from the player's robot's health points.
+- The game will display the player-robots remaining health points.
+
+8. The game will end.
+
+** Setting up the project**
+
+1. Set up the project in GitHub. We'll create a new GitHub repository, issues, and branches. These are basic steps for any new project.
+
+2. Create the project files and structure. We'll set up the index.html and game.js file strucuture according to the Con Solo instructions.
+
+3. Use JavaScript functions to disoplay the game status to the player. JavaScript has some built-in functions that do this, and well also create our own functions to control when these messages appear.
+
+4. Use JavaScript variables and operators to manage game data. We'll do a little math to keep track of robot health, player money, and other game values.
+
+5. Make decisions using JavaScript conditions. For example, the game should allow a robot to fight if it still has health points, but not if the health points is 0.
+
+6. Allow the player to decide whether they would like to fight or skip the fight.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+** Introducing Functions **
+
+a function is predefined action that we can call or invoke in our code (after we declare it earlier in the code).
+example- window.alert("This is an alert! JavaScript is running!");
+
+the alert() function tells the browser to display a message (i.e, an alert) to the user. One example is a dialog that pops up to alert you that you forgot to enter your password. The alert() function is built in to the browser; you can also create custom functions.
+
+to run a JavaScript function, we always must include parentheses even if theres nothing between them. When the browser reads the function name and sees the parentheses, it knows to execute the function.
+
+placing content between the () is called passing an argument into a function. For the alert() function, this content will be displayed as the dialogs message whenever the function is called.
+
+a ; closes out the alert() functions code. ; tells the browser that this particular line is completed and any code after it is a new piece of code. Each piece of code, seperated by ; , is known as an expression.
+
+**Declaring a Function**
+
+When we declare a function (i.e, create it and give it a name), we use the keyword fuction, followed by the name we want to give it. 
+
+After the functions name, we need to add (). our fight function doesnt need data passed into it the same way the alert does, but the () are required regardless.
+
+The {} wrap the code that belongs to this function. The function will run any code within the braces, at it wont run any code outside them. The code between these {} is called a code block.
+
+**Calling a Function**
+To call the function, add the function name with () and add a ; at the bottom of game.js,
+fight();
+Then save and refresh.
+
+**Storing User Input Using Variables**
+
+using javascript to ask the player for information and capture their input.
+
+like the alert function we used previously (program to player) we can use another window function called prompt. 
+window.prompt("What is your robot's name?");
+
+now the player can add their information to our program. Whereas the window.alert() function sent a message ("The fight has begun!") from the program to the player, the window.prompt() function asks the player to send some information (the robots name) back to the program. Information that a user enters into a program is often referred to as user input.
+
+if we were to run this program now and fill out the prompt, our response would be sent back to the browser...but there is nothing in place to capture and store that response.
+
+we need to capture this data somehow. To do that, well add an expression to the JS file. Edit the window.prompt() line to match the following code:
+var playerName = window.prompt("What is your robots name?");
+
+we introduced the var code element, which represents a variable.
+
+**Introducing Variables**
+
+A variable is a named location for a value that gets stored in the browsers memory when a program is run. Because the data coming from the prompt is user-driven, the value is unpredictable. Giving the data a variable name (in our case,playerName) allows us to refer to it consistently by just calling on that name.
+
+- var keyword: just like function, var is a keyword built into the javascript language. whenever its used it tells the program that we are creating a new variable and the next word is going to be the name of the variable.
+
+- Variable name: this is the actual name that will store the information assigned to the variable. When the browser reads this line, it will store this name to recall it later in the program. As a rule, give each variable a meaningful(but concise) name, and use camel casing for more than one word. 
+
+- assignment operator: The assignment operator (=) is a single equal sign that is used to set the value to a variable name. Everything on the left of the operator sets up the variable name for the program. Everything on the right of the operator is the value being stored into the variable name. This value can come in several forms, which are called data types. Here are some exampled of variables with different data types with an explanation of each one in the comments: 
+
+// This is a String data type; it must be wrapped in double quotes (" ") or single quotes (' ').
+var stringDataType = "This is a string, which is a fancy way to say text";
+
+// This is a Number data type; it can be an integer (whole number) or have decimals (floated numbers).
+var numberIntegerDataType = 10;
+var numberFloatDataType = 10.4;
+
+// This is a Boolean data type, which can only be given a value of true or false.
+var booleanDataType = true;
+
+**Comments**
+// 
+
+/* for longer comments */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+**Lesson 2**
+-fight a robot until defeat
+-fight another robot after defeat
+-receive the robots name from the player
+-allow players to fight or skip
+
+by the end of this lesson you will be able to :
+-create a 'for' loop to execute multiple statements repeatedly in a concise format
+-use conditional statements to control the flow of the application
+-debug the application using the 'debugger' statement and chrome's devtools
+
+*Approaching this Lesson**
+1. pseudocode the game logic
+2. add combatants to the battle using arrays
+3. fight enemy-robot combatants using 'for' loops
+4. fight each combatant using function arguments
+5. battle the combatants until defeated using a 'while' loop
+6. improve the players game experience.
+
+**Using pseudocode**
+A common question for new developers is "Where to begin?" A good starting point is to pseudocode the steps. Pseudocode is a plain-language description of the steps that an algorithm or application must complete. As opposed to code, which is meant for computers to interpret, pseudocode is meant for humans to interpret. Pseudocoding can help organize our thoughts, outline the objectives, and get the creative juices flowing.
+
+**Introducing arrays**
+
+This wouldn't be so bad if we were only introducing a couple of robots. But what if we later decide to add 100 robots or more? Typing out each enemy's variable and expression would be time-consuming and add bloat to the codebase. So how can we avoid that scenario?
+
+This is where we introduce a data structure called an array. Unlike the data types we've seen before, arrays are designed to store data as a list. In JavaScript, there are two types of data: primitives and objects. Primitive data is data that only holds one value, such as a string, number, or Boolean. Objects are a looser term for a data type that can store more than one value of data, arrays being one of them.
+
+-We now have three enemy combatants in an array! How did we do this? To declare an array, we use the var keyword followed by the array name. We assign the array using brackets [ ] that contain the array elements. Array elements are the values stored within the array. In our case, the enemyNames array contains three array elements, which are strings, separated by commas.
+
+                                    **Introducing 'for' loops**
+
+-The for loop is a special type of statement called a control flow. The control flow is the order in which the computer executes statements in a JavaScript file or script, which normally runs sequentially from the first line to the last line. Control flow statements, such as conditional statements or for statements, change the control flow based on the statement's conditions.
+
+-Just like if statements, for statements also have conditions, as shown in the following code "template":
+
+for([initial expression]; [condition]; [increment expression]) {
+   statement
+}
+
+-When a for loop executes, the following sequence occurs:
+
+The initial expression is the first statement executed, initializing the loop iterator or counter. This expression can also declare variables.
+
+Here's an example of an initial expression:
+
+var i = 0;
+The condition statement is then evaluated. If this condition evaluates to true, the loop statement executes. If the condition's value is false, the for loop terminates. If this condition is omitted, the condition is assumed to be true.
+
+Here's an example of a condition:
+
+i < 3;
+Then the statement executes. To execute multiple statements, use a block statement { }, as used in if-else statements.
+
+The increment expression executes, incrementing the iterator, which is the variable i.
+
+Here's an example of an IncrementExpression:
+
+i++
+This is equivalent to i = i + 1.
+
+After the iterator increments, the condition is then reevaluated and continues the loop chain.
+
+To see the iterator in action, let's display it in each loop by adding an argument in the console.log function with a comma:
+
+for(var i = 0; i < 3; i++) {
+  console.log("apple", i);
+}
+Alternatively, we could concatenate the string and the variable as shown in the following line of code:
+
+console.log("apple " + i)
